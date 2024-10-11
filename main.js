@@ -50,3 +50,13 @@ ScrollReveal().reveal(".header__image__card", {
   interval: 500,
   delay: 2500,
 });
+
+
+//modal function
+function openModal(id) {
+  document.getElementById(id).style.display = 'block';
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}

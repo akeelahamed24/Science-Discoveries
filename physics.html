@@ -46,11 +46,59 @@
       </div>
     </header>
 
+    <!-- Latest Physics Discoveries Section -->
+    <section class="latest__discoveries">
+      <div class="discovery__container">
+        <h2>Latest Physics Discoveries</h2>
+        <div class="discovery__cards">
+          <!-- Discovery 1 -->
+          <div class="discovery__card">
+            <h3>Atoms on the Edge</h3>
+            <p>Researchers have created a new type of matter called "atoms on the edge" by trapping atoms...</p>
+            <button onclick="openModal('atoms-edge')">Read More</button>
+          </div>
+          <!-- Discovery 2 -->
+          <div class="discovery__card">
+            <h3>AI Helps Distinguish Dark Matter</h3>
+            <p>Scientists have used artificial intelligence to identify dark matter signals from cosmic noise...</p>
+            <button onclick="openModal('ai-dark-matter')">Read More</button>
+          </div>
+          <!-- Discovery 3 -->
+          <div class="discovery__card">
+            <h3>One-Dimensional Gas of Light</h3>
+            <p>Physicists have created a new state of matter called a "one-dimensional gas" by trapping light...</p>
+            <button onclick="openModal('one-dimensional-gas')">Read More</button>
+          </div>
+        </div>
+
+        <div class="discovery__cards">
+          <!-- Discovery 4 -->
+          <div class="discovery__card">
+            <h3>Quantum Critical Metal</h3>
+            <p>Scientists have discovered a new class of quantum critical metal that could advance electronics...</p>
+            <button onclick="openModal('quantum-metal')">Read More</button>
+          </div>
+          <!-- Discovery 5 -->
+          <div class="discovery__card">
+            <h3>Chiral Molecule Research</h3>
+            <p>A breakthrough in the study of chiral molecules could lead to new drugs and materials...</p>
+            <button onclick="openModal('chiral-molecules')">Read More</button>
+          </div>
+          <!-- Discovery 6 -->
+          <div class="discovery__card">
+            <h3>Majorana Zero Modes</h3>
+            <p>Scientists have identified new types of Majorana zero modes in superconducting SnTe...</p>
+            <button onclick="openModal('majorana-zero')">Read More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Major Physics Discoveries Section -->
     <section class="discoveries">
         <div class="discovery__container">
           <h2>Major Physics Discoveries</h2>
           <div class="discovery__cards">
-            <!-- Discovery 1 -->
             <div class="discovery__card">
               <img src="assets/newtonp.jpg" class="nimg" alt="Newton's Laws" />
               <div class="discovery__details">
@@ -59,7 +107,6 @@
                 <p>Isaac Newton laid the foundation for classical mechanics with his laws of motion.</p>
               </div>
             </div>
-            <!-- Discovery 2 -->
             <div class="discovery__card">
               <img src="assets/einstein.jpg" class="eimg" alt="Einstein's Theory of Relativity" />
               <div class="discovery__details">
@@ -73,8 +120,197 @@
     </section>
 
     <footer class="footer">
-      <p>Copyright © 2024 Discover Science. All rights reserved.</p>
+      <div class="footer-container">
+        <p>Developed by <strong>Akeel Ahamed R S</strong></p>
+        <p>BE. Computer Science Engineering student at SVCE</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/akeelahamed242k5/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/akeelahamed24" target="_blank">GitHub</a>
+        </div>
+        <p>Copyright © 2024 Discover Science. All rights reserved.</p>
+      </div>
     </footer>
+
+<!-- Modal Containers for Each Discovery -->
+
+<!-- Atoms on the Edge Modal -->
+<div class="modal" id="atoms-edge">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('atoms-edge')">&times;</span>
+    <h3>Atoms on the Edge</h3>
+    <article>
+      <!-- Image at the top of the article -->
+      <img src="assets/modal/atom-edge.png" alt="Atoms on the Edge" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Researchers have discovered a new state of matter called "atoms on the edge" by trapping atoms at the boundary between two materials. This discovery could lead to new types of quantum materials and devices with unique properties.</p>
+
+      <!-- Divider -->
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>The Discovery</h4>
+      <p>At the interface of topological insulators, atoms behave differently from those in bulk materials. This unique state could open up new possibilities for studying quantum behavior in materials.</p>
+
+      <!-- Divider -->
+      <hr>
+
+      <!-- Future Implications -->
+      <h4>Future Implications</h4>
+      <p>Researchers are exploring potential applications in quantum computing and material science. Further research is required to determine the stability of this new matter.</p>
+
+      <!-- Divider -->
+      <hr>
+
+      <!-- Conclusion -->
+      <p>These discoveries mark a significant step toward understanding edge states, which could revolutionize technology. The potential applications are immense, especially in quantum computing.</p>
+    </article>
+  </div>
+</div>
+
+<div class="modal" id="ai-dark-matter">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('ai-dark-matter')">&times;</span>
+    <h3>AI Helps Distinguish Dark Matter from Cosmic Noise</h3>
+    <article>
+      <img src="assets/modal/cosmic-matter.png" alt="AI Dark Matter" class="modal-image">
+      
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Scientists have leveraged artificial intelligence to separate dark matter signals from cosmic noise. This development could revolutionize our understanding of dark matter.</p>
+      <hr>
+      
+      <!-- Discovery Details -->
+      <h4>The Role of AI</h4>
+      <p>The AI model was trained on large datasets to differentiate dark matter signals from cosmic noise. This could lead to more accurate identification of dark matter.</p>
+      <hr>
+      
+      <!-- Future Research -->
+      <h4>Future Research</h4>
+      <p>This AI-based approach could help scientists uncover more about dark matter, which is still largely mysterious despite making up a significant portion of the universe’s mass.</p>
+      <hr>
+      
+      <!-- Conclusion -->
+      <p>The use of AI in astrophysical research is increasingly important, offering new ways to analyze vast amounts of data.</p>
+    </article>
+  </div>
+</div>
+
+<div class="modal" id="one-dimensional-gas">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('one-dimensional-gas')">&times;</span>
+    <h3>One-Dimensional Gas of Light</h3>
+    <article>
+      <img src="assets/modal/one-d.png" alt="One-Dimensional Gas of Light" class="modal-image">
+      
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Physicists have created a new state of matter called "one-dimensional gas of light" by trapping photons in a narrow lattice. This discovery could open new doors in quantum computing and photonics.</p>
+      <hr>
+      
+      <!-- Discovery Process -->
+      <h4>Discovery Process</h4>
+      <p>Photons were confined in a one-dimensional optical lattice, which allowed researchers to observe light interacting in unprecedented ways.</p>
+      <hr>
+      
+      <!-- Potential Applications -->
+      <h4>Potential Applications</h4>
+      <p>This new state of matter could lead to the development of new light-based circuits and processors, advancing quantum computing.</p>
+      <hr>
+      
+      <!-- Conclusion -->
+      <p>The discovery of the one-dimensional gas of light represents a significant breakthrough in photonics, offering exciting possibilities for future research.</p>
+    </article>
+  </div>
+</div>
+
+
+<div class="modal" id="quantum-metal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('quantum-metal')">&times;</span>
+    <h3>Quantum Critical Metal</h3>
+    <article>
+      <img src="assets/modal/quant-metal.png" alt="Quantum Critical Metal" class="modal-image">
+      
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Scientists have identified a new class of quantum critical metal, which could have major implications for the development of next-generation electronic devices.</p>
+      <hr>
+      
+      <!-- Unique Properties -->
+      <h4>Unique Properties</h4>
+      <p>These metals exhibit remarkable properties at quantum critical points, undergoing phase transitions at absolute zero temperature.</p>
+      <hr>
+      
+      <!-- Applications in Quantum Computing -->
+      <h4>Applications</h4>
+      <p>Quantum critical metals could pave the way for more efficient quantum-based systems, enhancing superconductors and other materials used in quantum computing.</p>
+      <hr>
+      
+      <!-- Conclusion -->
+      <p>The discovery holds great promise for quantum computing and advanced materials science, offering new insights into the behavior of materials at the quantum level.</p>
+    </article>
+  </div>
+</div>
+
+<div class="modal" id="chiral-molecules">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('chiral-molecules')">&times;</span>
+    <h3>Chiral Molecule Research</h3>
+    <article>
+      <img src="assets/modal/chiral.png" alt="Chiral Molecule Research" class="modal-image">
+      
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Recent breakthroughs in chiral molecule research have provided new insights into molecular asymmetry, which plays a crucial role in drug development and material science.</p>
+      <hr>
+      
+      <!-- Discovery Details -->
+      <h4>The Importance of Chirality</h4>
+      <p>Chiral molecules, which are mirror images of one another, often exhibit different biological activities. This research could lead to the development of more effective drugs with fewer side effects.</p>
+      <hr>
+      
+      <!-- Future Applications -->
+      <h4>Potential Applications</h4>
+      <p>This research could also lead to the creation of novel materials with unique optical or chemical properties.</p>
+      <hr>
+      
+      <!-- Conclusion -->
+      <p>Ongoing research aims to further understand chirality and its potential applications in pharmaceuticals and material sciences.</p>
+    </article>
+  </div>
+</div>
+
+
+<!-- Majorana Zero Modes Modal -->
+<div class="modal" id="majorana-zero">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('majorana-zero')">&times;</span>
+    <h3>Majorana Zero Modes in Superconductors</h3>
+    <article>
+      <img src="assets/modal/majorana.png" alt="Majorana Zero Modes" class="modal-image">
+      
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Scientists have identified new types of Majorana zero modes in superconducting materials, which could lead to breakthroughs in quantum computing.</p>
+      <hr>
+      
+      <!-- Discovery Insights -->
+      <h4>Majorana Zero Modes</h4>
+      <p>These quasi-particles, first predicted by Ettore Majorana, are important for stabilizing qubits in quantum computers, improving fault tolerance.</p>
+      <hr>
+      
+      <!-- Future Potential -->
+      <h4>Applications in Quantum Computing</h4>
+      <p>The presence of Majorana zero modes could lead to the development of more robust quantum computing technologies, which are crucial for future advancements.</p>
+      <hr>
+      
+      <!-- Conclusion -->
+      <p>This discovery is a major step forward in the quest to develop scalable and fault-tolerant quantum computers, with broad applications across industries.</p>
+    </article>
+  </div>
+</div>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
