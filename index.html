@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Science Discovery | Explore the Wonders of Science</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="index.html">Science<span> Discovery</span>.</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <span><i class="ri-menu-line"></i></span>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="physics.html">Physics</a></li>
+        <li><a href="chemistry.html">Chemistry</a></li>
+        <li><a href="biology.html">Biology</a></li>
+        <li><a href="astronomy.html">Astronomy</a></li>
+        <li><a href="technology.html">Contact</a></li>
+      </ul>
+      <div class="nav__btns">
+        <button class="btn sign__up"> Sign Up</button>
+        <button class="btn sign__in">Sign In</button>
+      </div>
+    </nav>
+    <header class="header__container">
+      <div class="header__image">
+        <div class="header__image__card header__image__card-1">
+          <span><i class="ri-atom-line"></i></span>
+          Physics Discoveries
+        </div>
+        <div class="header__image__card header__image__card-2">
+          <span><i class="ri-flask-line"></i></span>
+          Chemistry Experiments
+        </div>
+        <div class="header__image__card header__image__card-3">
+          <span><i class="ri-leaf-line"></i></span>
+          Biological Research
+        </div>
+        <div class="header__image__card header__image__card-4">
+          <span><i class="ri-satellite-line"></i></span>
+          Astronomical Events
+        </div>
+        <img src="assets/science-events.png" alt="science events" />
+      </div>
+      <div class="header__content">
+        <h1>EXPLORE<br />THE WONDERS OF <span>SCIENCE</span> <br/> NEAR YOU</h1>
+        <p>
+          Dive into the latest discoveries and activities in the world of science, from physics breakthroughs and chemistry experiments to biological research and astronomical events. Discover something new every day!
+        </p>
+        <form action="/">
+          <div class="input__row">
+            <div class="input__group">
+              <h5>Field of Study</h5>
+              <div>
+                <span><i class="ri-book-line"></i></span>
+                <input type="text" placeholder="Physics, Chemistry..." />
+              </div>
+            </div>
+            <div class="input__group">
+              <h5>Location</h5>
+              <div>
+                <span><i class="ri-map-pin-line"></i></span>
+                <input type="text" placeholder="San Francisco, CA" />
+              </div>
+            </div>
+          </div>
+          <button type="submit">Find Discoveries</button>
+        </form>
+        <div class="bar">
+          Copyright © 2024 Science Discovery. All rights reserved.
+        </div>
+      </div>
+    </header>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
