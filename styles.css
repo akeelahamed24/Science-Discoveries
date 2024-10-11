@@ -270,6 +270,7 @@ nav {
   border-radius: 10px;
   transition: 0.3s;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .header__content button:hover {

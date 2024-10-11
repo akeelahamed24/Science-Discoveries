@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="physics.css" />
+    <title>Discover Science | Physics</title>
+</head>
+<body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="index.html">Discover<span> Science</span>.</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <span><i class="ri-menu-line"></i></span>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="physics.html" class="active">Physics</a></li>
+        <li><a href="chemistry.html">Chemistry</a></li>
+        <li><a href="biology.html">Biology</a></li>
+        <li><a href="astronomy.html">Astronomy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <header class="header__container">
+      <div class="header__content">
+        <h1>Physics Discoveries</h1>
+        <p>Explore groundbreaking discoveries like Newton's Laws and Einstein's Theory of Relativity.</p>
+        <form action="/">
+          <div class="input__row">
+            <div class="input__group">
+              <h5>Search Discoveries</h5>
+              <div>
+                <span><i class="ri-search-line"></i></span>
+                <input type="text" placeholder="e.g. Quantum Mechanics" />
+              </div>
+            </div>
+          </div>
+          <button type="submit">Find Discoveries</button>
+        </form>
+      </div>
+    </header>
+
+    <section class="discoveries">
+        <div class="discovery__container">
+          <h2>Major Physics Discoveries</h2>
+          <div class="discovery__cards">
+            <!-- Discovery 1 -->
+            <div class="discovery__card">
+              <img src="assets/newtonp.jpg" class="nimg" alt="Newton's Laws" />
+              <div class="discovery__details">
+                <h3>Newton's Laws of Motion</h3>
+                <p><i class="ri-calendar-line"></i> 1687</p>
+                <p>Isaac Newton laid the foundation for classical mechanics with his laws of motion.</p>
+              </div>
+            </div>
+            <!-- Discovery 2 -->
+            <div class="discovery__card">
+              <img src="assets/einstein.jpg" class="eimg" alt="Einstein's Theory of Relativity" />
+              <div class="discovery__details">
+                <h3>Einstein's Theory of Relativity</h3>
+                <p><i class="ri-calendar-line"></i> 1905</p>
+                <p>Einstein revolutionized physics with his theory of special and general relativity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+      <p>Copyright © 2024 Discover Science. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+</body>
+</html>

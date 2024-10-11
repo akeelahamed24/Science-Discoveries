@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #ff4d4d;
+  --primary-color-dark: #d43b3b;
+  --text-dark: #f0f0f0;
+  --text-light: #a0a0a0;
+  --white: #121212;
+  --max-width: 1200px;
+  --header-font: "Bebas Neue", sans-serif;
+}
+
+body {
+  background-color: var(--white);
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: flex;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+}
+
+.nav__header {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+}
+
+.nav__logo a {
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-family: var(--header-font);
+  color: var(--white);
+}
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.nav__links {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--primary-color);
+  transition: 0.5s;
+  z-index: -1;
+  transform: translateY(-100%);
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.nav__links a {
+  font-weight: 500;
+  color: var(--white);
+}
+
+.header__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding-block: 8rem 2rem;
+  padding-inline: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header__content h1 {
+  margin-bottom: 1rem;
+  font-size: 4rem;
+  font-weight: 400;
+  font-family: var(--header-font);
+  color: var(--text-dark);
+  line-height: 4.5rem;
+}
+
+.header__content p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  line-height: 1.75rem;
+}
+
+.contact__form__container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.contact__form {
+    background-color: #f8f8f8; /* Light background for the form */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.input__group {
+    margin-bottom: 15px;
+}
+
+.input__group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.input__group input,
+.input__group textarea {
+    width: 100%;
+    outline: none;
+    border: 2px solid var(--primary-color-dark);
+    background-color: transparent;
+    color: var(--text-dark);
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.input__group input:focus,
+.input__group textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.contact__form button {
+    width: 100%;
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.contact__form button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--primary-color-dark);
+    color: var(--text-dark);
+}

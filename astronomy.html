@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="astronomy.css" />
+    <title>Discover Science | Astronomy</title>
+</head>
+<body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="index.html">Discover<span> Science</span>.</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <span><i class="ri-menu-line"></i></span>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="physics.html">Physics</a></li>
+        <li><a href="chemistry.html">Chemistry</a></li>
+        <li><a href="biology.html">Biology</a></li>
+        <li><a href="astronomy.html" class="active">Astronomy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <header class="header__container">
+      <div class="header__content">
+        <h1>Astronomy Discoveries</h1>
+        <p>Venture into the cosmos and discover celestial bodies and the universe's mysteries.</p>
+        <form action="/">
+          <div class="input__row">
+            <div class="input__group">
+              <h5>Search Discoveries</h5>
+              <div>
+                <span><i class="ri-search-line"></i></span>
+                <input type="text" placeholder="e.g. Heliocentric Model" />
+              </div>
+            </div>
+          </div>
+          <button type="submit">Find Discoveries</button>
+        </form>
+      </div>
+    </header>
+
+    <section class="discoveries">
+        <div class="discovery__container">
+          <h2>Major Astronomy Discoveries</h2>
+          <div class="discovery__cards">
+            <!-- Discovery 1 -->
+            <div class="discovery__card">
+              <img src="assets/hm.jpg" alt="Heliocentric Model" />
+              <div class="discovery__details">
+                <h3>Heliocentric Model</h3>
+                <p><i class="ri-calendar-line"></i> 1543</p>
+                <p>Nicolaus Copernicus proposed that the Sun is at the center of the solar system.</p>
+              </div>
+            </div>
+            <!-- Discovery 2 -->
+            <div class="discovery__card">
+              <img src="assets/einstein.jpg" alt="General Relativity" />
+              <div class="discovery__details">
+                <h3>General Relativity</h3>
+                <p><i class="ri-calendar-line"></i> 1915</p>
+                <p>Albert Einstein introduced the theory explaining gravity as a curvature of spacetime.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+      <p>Copyright © 2024 Discover Science. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+</body>
+</html>
