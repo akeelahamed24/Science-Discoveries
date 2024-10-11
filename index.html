@@ -14,7 +14,7 @@
     <nav>
       <div class="nav__header">
         <div class="nav__logo">
-          <a href="index.html">Science<span> Discovery</span>.</a>
+          <a href="index.html">Discovery<span>Science</span>.</a>
         </div>
         <div class="nav__menu__btn" id="menu-btn">
           <span><i class="ri-menu-line"></i></span>
@@ -27,25 +27,14 @@
         <li><a href="astronomy.html">Astronomy</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <div class="nav__btns">
+        <a href="sign-in.html" class="sign__in">Sign In</a>
+        <a href="sign-up.html" class="sign__up">Sign Up</a>
+      </div>
     </nav>
+
     <header class="header__container">
       <div class="header__image">
-        <div class="header__image__card header__image__card-1">
-          <span><i class="ri-atom-line"></i></span>
-          Physics Discoveries
-        </div>
-        <div class="header__image__card header__image__card-2">
-          <span><i class="ri-flask-line"></i></span>
-          Chemistry Experiments
-        </div>
-        <div class="header__image__card header__image__card-3">
-          <span><i class="ri-leaf-line"></i></span>
-          Biological Research
-        </div>
-        <div class="header__image__card header__image__card-4">
-          <span><i class="ri-satellite-line"></i></span>
-          Astronomical Events
-        </div>
         <img src="assets/science-events.png" alt="science events" />
       </div>
       <div class="header__content">
@@ -72,12 +61,99 @@
           </div>
           <button type="submit">Find Discoveries</button>
         </form>
-        <div class="bar">
-          Copyright © 2024 Science Discovery. All rights reserved.
-        </div>
       </div>
     </header>
+
+    <!-- Main content section -->
+    <main>
+      <section class="section physics__section">
+        <div class="container">
+          <img src="assets/physics-image.jpg" alt="Physics Discoveries" class="section-image" />
+          <div class="content">
+            <h2>Physics Discoveries</h2>
+            <p>Explore groundbreaking discoveries in the world of physics, from quantum mechanics to relativity.</p>
+            <a href="physics.html" class="explore__btn">Explore Physics</a>
+          </div>
+        </div>
+      </section>
+    
+      <section class="section chemistry__section">
+        <div class="container">
+          <img src="assets/chemistry-image.jpg" alt="Chemistry Experiments" class="section-image" />
+          <div class="content">
+            <h2>Chemistry Experiments</h2>
+            <p>Dive into fascinating chemistry experiments that reveal the mysteries of chemical reactions and compounds.</p>
+            <a href="chemistry.html" class="explore__btn">Explore Chemistry</a>
+          </div>
+        </div>
+      </section>
+    
+      <section class="section biology__section">
+        <div class="container">
+          <img src="assets/biology-image.jpg" alt="Biological Research" class="section-image" />
+          <div class="content">
+            <h2>Biological Research</h2>
+            <p>Discover the latest research in biology, from molecular biology to ecology and evolution.</p>
+            <a href="biology.html" class="explore__btn">Explore Biology</a>
+          </div>
+        </div>
+      </section>
+    
+      <section class="section astronomy__section">
+        <div class="container">
+          <img src="assets/astronomy-image.jpg" alt="Astronomical Events" class="section-image" />
+          <div class="content">
+            <h2>Astronomical Events</h2>
+            <p>Witness the wonders of the universe through exciting astronomical events and discoveries.</p>
+            <a href="astronomy.html" class="explore__btn">Explore Astronomy</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    
+
+    <footer>
+      <div class="footer-container">
+        <p>Developed by <strong>Akeel Ahamed R S</strong></p>
+        <p>BE. Computer Science Engineering student at SVCE</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/akeelahamed242k5/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/akeelahamed24" target="_blank">GitHub</a>
+        </div>
+        <p>Copyright © 2024 Discover Science. All rights reserved.</p>
+      </div>
+    </footer>
+
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const sections = document.querySelectorAll('.section');
+    
+        const options = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1 // Trigger when 10% of the element is visible
+        };
+    
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('fade-in');
+              entry.target.classList.remove('fade-out');
+            } else {
+              entry.target.classList.remove('fade-in');
+              entry.target.classList.add('fade-out');
+            }
+          });
+        }, options);
+    
+        sections.forEach(section => {
+          observer.observe(section);
+        });
+      });
+    </script>
+    
   </body>
 </html>
