@@ -136,6 +136,62 @@ nav {
   color: var(--white);
 }
 
+/* Hide sign-up and sign-in buttons outside the nav menu on smaller screens */
+@media (max-width: 768px) {
+  .nav__btns .sign__up,
+  .nav__btns .sign__in {
+    display: none; /* Hides the standalone sign-up and sign-in buttons */
+  }
+
+  /* Add the sign-up button to the navigation menu */
+  .nav__links a.sign__up {
+    display: block; /* Display in the nav links */
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .nav__links a.sign__up:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+
+  /* Add the sign-in button to the navigation menu */
+  .nav__links a.sign__in {
+    display: block; /* Display in the nav links */
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .nav__links a.sign__in:hover {
+    background-color: var(--primary-color-dark);
+  }
+}
+
+/* On larger screens, restore the original buttons */
+@media (min-width: 768px) {
+  .nav__links a.sign__up,
+  .nav__links a.sign__in {
+    display: none; /* Hide in the nav links for larger screens */
+  }
+
+  .nav__btns .sign__up,
+  .nav__btns .sign__in {
+    display: inline-flex; /* Show as standalone buttons again */
+  }
+}
 /* Adjustments to the header content for better alignment */
 .header__container {
   max-width: var(--max-width);
