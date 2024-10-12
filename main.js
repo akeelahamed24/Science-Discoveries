@@ -14,6 +14,11 @@ navLinks.addEventListener("click", (e) => {
   menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
+
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+});
+
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
