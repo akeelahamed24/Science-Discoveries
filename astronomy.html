@@ -31,19 +31,103 @@
       <div class="header__content">
         <h1>Astronomy Discoveries</h1>
         <p>Venture into the cosmos and discover celestial bodies and the universe's mysteries.</p>
-        <form action="/">
+        
+        <form action="javascript:void(0);" id="searchForm">
           <div class="input__row">
             <div class="input__group">
               <h5>Search Discoveries</h5>
-              <div>
+              <div class="search-bar">
                 <span><i class="ri-search-line"></i></span>
-                <input type="text" placeholder="e.g. Heliocentric Model" />
+                <input type="text" id="searchInput" placeholder="e.g. exoplanet-discoveries" oninput="showSuggestions()" />
+                <div id="suggestions-box" class="suggestions"></div>
               </div>
             </div>
           </div>
-          <button type="submit">Find Discoveries</button>
+          <!-- <button type="submit">Find Discoveries</button> -->
         </form>
+        
+        <div id="searchResults" class="search-results"></div>
       </div>
+    
+      <!-- JavaScript code -->
+      <script>
+        const astronomyModals = {
+          'exoplanet-discoveries': { title: 'Exoplanet Discoveries', description: 'Astronomers have continued to discover potentially habitable exoplanets within the habitable zones of their stars, where liquid water could exist...' },
+          'black-hole-mergers': { title: 'Black Hole Mergers', description: 'The detection of gravitational waves from merging black holes has provided new insights into the universe and evidence for intermediate-mass black holes...' },
+          'fast-radio-bursts': { title: 'Fast Radio Bursts (FRBs)', description: 'FRBs are mysterious cosmic signals, and recent studies suggest neutron stars or magnetars may be potential sources of these brief, intense radio bursts...' },
+          'dark-matter-dark-energy': { title: 'Dark Matter and Dark Energy', description: 'Ongoing research is attempting to constrain the properties of dark matter and dark energy, which make up the majority of the universe\'s mass and energy...' },
+          'interstellar-objects': { title: 'Interstellar Objects', description: 'The discovery of interstellar objects like Oumuamua and Borisov has provided unique opportunities to study objects from beyond our solar system...' },
+          'galaxy-clusters': { title: 'Galaxy Clusters', description: 'Massive galaxy clusters, the largest structures in the universe, offer valuable insights into the distribution of matter and the evolution of galaxies...' }
+        };
+    
+        const astronomySuggestions = Object.values(astronomyModals).map(modal => modal.title);
+    
+        const searchInput = document.getElementById('searchInput');
+        const suggestionsBox = document.getElementById('suggestions-box');
+        const searchResults = document.getElementById('searchResults');
+    
+        function showSuggestions() {
+          const input = searchInput.value.toLowerCase();
+          suggestionsBox.innerHTML = ''; // Clear previous suggestions
+    
+          if (input.length === 0) {
+            suggestionsBox.style.display = "none";
+            return;
+          }
+    
+          const filteredSuggestions = astronomySuggestions.filter(item => item.toLowerCase().includes(input));
+    
+          if (filteredSuggestions.length > 0) {
+            suggestionsBox.style.display = "block";
+    
+            filteredSuggestions.forEach(suggestion => {
+              const div = document.createElement("div");
+              div.classList.add("suggestion-item");
+              div.innerHTML = suggestion;
+              div.onclick = () => {
+                searchInput.value = suggestion; // Set selected suggestion as input
+                suggestionsBox.style.display = "none"; // Hide suggestions box
+                showSearchResults(suggestion); // Show search results
+              };
+              suggestionsBox.appendChild(div);
+            });
+          } else {
+            suggestionsBox.style.display = "none";
+          }
+        }
+    
+        function showSearchResults(query) {
+          searchResults.innerHTML = ''; // Clear previous results
+    
+          for (const modalId in astronomyModals) {
+            const modal = astronomyModals[modalId];
+            if (modal.title.toLowerCase().includes(query.toLowerCase())) {
+              const resultItem = document.createElement('div');
+              resultItem.classList.add('search-result-item');
+              resultItem.innerHTML = `
+                <h3>${modal.title}</h3>
+                <p>${modal.description}</p>
+                <button onclick="openModal('${modalId}')">Read More</button>
+              `;
+              searchResults.appendChild(resultItem);
+            }
+          }
+    
+          if (!searchResults.innerHTML) {
+            searchResults.innerHTML = '<p>No matching discoveries found.</p>';
+          }
+        }
+    
+        function openModal(modalId) {
+          const modal = document.getElementById(modalId);
+          modal.style.display = 'block';
+        }
+    
+        function closeModal(modalId) {
+          const modal = document.getElementById(modalId);
+          modal.style.display = 'none';
+        }
+      </script>
     </header>
 
 <!-- Latest Astronomy Discoveries Section -->

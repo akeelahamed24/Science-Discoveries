@@ -31,20 +31,124 @@
       <div class="header__content">
         <h1>Chemistry Discoveries</h1>
         <p>Dive into revolutionary breakthroughs such as the Periodic Table and Atomic Theory.</p>
-        <form id="searchForm">
+        
+        <form action="javascript:void(0);" id="searchForm">
           <div class="input__row">
             <div class="input__group">
               <h5>Search Discoveries</h5>
-              <div>
+              <div class="search-bar">
                 <span><i class="ri-search-line"></i></span>
-                <input id="searchInput" type="text" placeholder="e.g. Atomic Theory" />
+                <input type="text" id="searchInput" placeholder="e.g. artificial photosynthesis" oninput="showSuggestions()" />
+                <div id="suggestions-box" class="suggestions"></div>
               </div>
             </div>
           </div>
-          <button type="submit">Find Discoveries</button>
+          <!-- <button type="submit">Find Discoveries</button> -->
         </form>
+    
+        <!-- Div for displaying search results -->
+        <div id="searchResults" class="search-results"></div>
       </div>
+    
+      <!-- JavaScript -->
+      <script>
+        const modals = {
+          'artificial-photosynthesis': {
+            title: 'Artificial Photosynthesis',
+            description: 'Researchers have made significant strides in creating artificial systems that mimic photosynthesis, converting sunlight and water into hydrogen fuel...'
+          },
+          'recyclable-plastics': {
+            title: 'Recyclable Plastics',
+            description: 'Scientists have developed new methods to break down plastic waste into its original components, allowing for recycling without significant energy consumption...'
+          },
+          'advanced-battery-materials': {
+            title: 'Advanced Battery Materials',
+            description: 'Researchers are exploring novel materials for batteries, such as solid-state electrolytes and metal-air batteries, which could lead to higher energy density...'
+          },
+          'sustainable-materials': {
+            title: 'Sustainable Materials',
+            description: 'Scientists are developing sustainable materials made from renewable resources like plants, fungi, and bacteria, offering eco-friendly alternatives...'
+          },
+          'drug-discovery': {
+            title: 'Drug Discovery',
+            description: 'Artificial intelligence is being used to accelerate drug discovery by analyzing vast amounts of data to identify potential drug candidates more efficiently...'
+          },
+          'carbon-capture': {
+            title: 'Carbon Capture and Utilization',
+            description: 'Researchers are working on technologies to capture carbon dioxide emissions and convert them into valuable products, such as fuels and building materials...'
+          }
+        };
+    
+        const suggestions = Object.values(modals).map(modal => modal.title);
+    
+        const searchInput = document.getElementById('searchInput');
+        const suggestionsBox = document.getElementById('suggestions-box');
+        const searchResults = document.getElementById('searchResults');
+    
+        function showSuggestions() {
+          const input = searchInput.value.toLowerCase();
+          suggestionsBox.innerHTML = ''; // Clear previous suggestions
+    
+          if (input.length === 0) {
+            suggestionsBox.style.display = "none";
+            return;
+          }
+    
+          const filteredSuggestions = suggestions.filter(item => item.toLowerCase().includes(input));
+    
+          if (filteredSuggestions.length > 0) {
+            suggestionsBox.style.display = "block";
+    
+            filteredSuggestions.forEach(suggestion => {
+              const div = document.createElement("div");
+              div.classList.add("suggestion-item");
+              div.innerHTML = suggestion;
+              div.onclick = () => {
+                searchInput.value = suggestion; // Set selected suggestion as input
+                suggestionsBox.style.display = "none"; // Hide suggestions box
+                showSearchResults(suggestion); // Show search results
+              };
+              suggestionsBox.appendChild(div);
+            });
+          } else {
+            suggestionsBox.style.display = "none";
+          }
+        }
+    
+        function showSearchResults(query) {
+          searchResults.innerHTML = ''; // Clear previous results
+    
+          for (const modalId in modals) {
+            const modal = modals[modalId];
+            if (modal.title.toLowerCase().includes(query.toLowerCase())) {
+              const resultItem = document.createElement('div');
+              resultItem.classList.add('search-result-item');
+              resultItem.innerHTML = `
+                <h3>${modal.title}</h3>
+                <p>${modal.description}</p>
+                <button onclick="openModal('${modalId}')">Read More</button>
+              `;
+              searchResults.appendChild(resultItem);
+            }
+          }
+    
+          if (!searchResults.innerHTML) {
+            searchResults.innerHTML = '<p>No matching discoveries found.</p>';
+          }
+        }
+    
+        function openModal(modalId) {
+          const modal = document.getElementById(modalId);
+          modal.style.display = 'block';
+        }
+    
+        function closeModal(modalId) {
+          const modal = document.getElementById(modalId);
+          modal.style.display = 'none';
+        }
+      </script>
     </header>
+    
 
     <!-- Latest Chemistry Discoveries Section -->
 <section class="latest__discoveries">

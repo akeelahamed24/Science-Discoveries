@@ -31,20 +31,104 @@
       <div class="header__content">
         <h1>Biology Discoveries</h1>
         <p>Uncover the wonders of life sciences like Darwin’s Evolution Theory and DNA structure.</p>
-        <form action="/">
+    
+        <form action="javascript:void(0);" id="searchForm">
           <div class="input__row">
             <div class="input__group">
               <h5>Search Discoveries</h5>
-              <div>
+              <div class="search-bar">
                 <span><i class="ri-search-line"></i></span>
-                <input type="text" placeholder="e.g. Evolution Theory" />
+                <input type="text" id="searchInput" placeholder="e.g. crispr gene editing" oninput="showSuggestions()" />
+                <div id="suggestions-box" class="suggestions"></div>
               </div>
             </div>
           </div>
-          <button type="submit">Find Discoveries</button>
+          <!-- <button type="submit">Find Discoveries</button> -->
         </form>
+    
+        <div id="searchResults" class="search-results"></div>
       </div>
+    
+      <!-- JavaScript Code for Biology Search -->
+      <script>
+        const biologyModals = {
+          'crispr-gene-editing': { title: 'CRISPR Gene Editing', description: 'CRISPR-Cas9 technology allows scientists to make precise edits to DNA, opening new avenues for treating genetic diseases, enhancing crops, and understanding gene function...' },
+          'organ-on-a-chip': { title: 'Organ-on-a-Chip', description: 'Researchers are developing organ-on-a-chip models that mimic human organs, providing a more ethical and accurate method for studying diseases and drug effects...' },
+          'brain-organoids': { title: 'Brain Organoids', description: 'Scientists are growing mini brain organoids from stem cells, helping to study brain development, neurological disorders, and potential therapeutic interventions...' },
+          'synthetic-biology': { title: 'Synthetic Biology', description: 'Synthetic biology allows researchers to design biological systems, from creating artificial cells to engineering organisms for producing new products like biofuels...' },
+          'microbiome-research': { title: 'Microbiome Research', description: 'The study of the human microbiome, especially gut bacteria, is revealing its critical role in health, including links to mental health, obesity, and autoimmune diseases...' },
+          'dna-sequencing-advances': { title: 'DNA Sequencing Advances', description: 'Advances in DNA sequencing are making it faster and cheaper, helping scientists study diseases, track evolution, and analyze ancient DNA with unprecedented detail...' }
+        };
+    
+        const biologySuggestions = Object.values(biologyModals).map(modal => modal.title);
+    
+        const searchInput = document.getElementById('searchInput');
+        const suggestionsBox = document.getElementById('suggestions-box');
+        const searchResults = document.getElementById('searchResults');
+    
+        function showSuggestions() {
+          const input = searchInput.value.toLowerCase();
+          suggestionsBox.innerHTML = '';
+    
+          if (input.length === 0) {
+            suggestionsBox.style.display = "none";
+            return;
+          }
+    
+          const filteredSuggestions = biologySuggestions.filter(item => item.toLowerCase().includes(input));
+    
+          if (filteredSuggestions.length > 0) {
+            suggestionsBox.style.display = "block";
+            filteredSuggestions.forEach(suggestion => {
+              const div = document.createElement("div");
+              div.classList.add("suggestion-item");
+              div.innerHTML = suggestion;
+              div.onclick = () => {
+                searchInput.value = suggestion;
+                suggestionsBox.style.display = "none";
+                showSearchResults(suggestion);
+              };
+              suggestionsBox.appendChild(div);
+            });
+          } else {
+            suggestionsBox.style.display = "none";
+          }
+        }
+    
+        function showSearchResults(query) {
+          searchResults.innerHTML = '';
+    
+          for (const modalId in biologyModals) {
+            const modal = biologyModals[modalId];
+            if (modal.title.toLowerCase().includes(query.toLowerCase())) {
+              const resultItem = document.createElement('div');
+              resultItem.classList.add('search-result-item');
+              resultItem.innerHTML = `
+                <h3>${modal.title}</h3>
+                <p>${modal.description}</p>
+                <button onclick="openModal('${modalId}')">Read More</button>
+              `;
+              searchResults.appendChild(resultItem);
+            }
+          }
+    
+          if (!searchResults.innerHTML) {
+            searchResults.innerHTML = '<p>No matching discoveries found.</p>';
+          }
+        }
+    
+        function openModal(modalId) {
+          const modal = document.getElementById(modalId);
+          modal.style.display = 'block';
+        }
+    
+        function closeModal(modalId) {
+          const modal = document.getElementById(modalId);
+          modal.style.display = 'none';
+        }
+      </script>
     </header>
+    
 
 <!-- Latest Biology Discoveries Section -->
 <section class="latest__discoveries">

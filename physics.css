@@ -697,3 +697,101 @@ footer {
     font-size: 0.75rem; /* Further reduce button text size */
   }
 }
+/* Search bar styling */
+.search-bar {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 2px solid var(--primary-color-dark);
+  border-radius: 50px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: var(--primary-color);
+}
+
+/* Suggestions dropdown box */
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 10px 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  display: none; /* Hidden by default */
+  z-index: 999;
+}
+
+/* Suggestion item styling */
+.suggestion-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Optional styling for when the search input is focused */
+.search-bar input:focus + .suggestions {
+  display: block;
+}
+
+/* Styling for search results */
+.search-result-item {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.search-result-item h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
+
+.search-result-item button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-result-item button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+/* For smaller devices */
+@media (max-width: 768px) {
+  .search__section {
+    padding: 2rem 1rem;
+  }
+
+  .search__header h2 {
+    font-size: 1.8rem;
+  }
+
+  .search__input {
+    padding: 0.6rem 1rem;
+  }
+
+  .search__button {
+    padding: 0.75rem 1.5rem;
+  }
+}
