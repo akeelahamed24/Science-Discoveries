@@ -46,6 +46,55 @@
       </div>
     </header>
 
+<!-- Latest Biology Discoveries Section -->
+<section class="latest__discoveries">
+  <div class="discovery__container">
+    <h2>Latest Biology Discoveries</h2>
+    <div class="discovery__cards">
+      <!-- Discovery 1 -->
+      <div class="discovery__card">
+        <h3>CRISPR Gene Editing</h3>
+        <p>CRISPR-Cas9 technology allows scientists to make precise edits to DNA, opening new avenues for treating genetic diseases, enhancing crops, and understanding gene function...</p>
+        <button onclick="openModal('crispr-gene-editing')">Read More</button>
+      </div>
+      <!-- Discovery 2 -->
+      <div class="discovery__card">
+        <h3>Organ-on-a-Chip</h3>
+        <p>Researchers are developing organ-on-a-chip models that mimic human organs, providing a more ethical and accurate method for studying diseases and drug effects...</p>
+        <button onclick="openModal('organ-on-a-chip')">Read More</button>
+      </div>
+      <!-- Discovery 3 -->
+      <div class="discovery__card">
+        <h3>Brain Organoids</h3>
+        <p>Scientists are growing mini brain organoids from stem cells, helping to study brain development, neurological disorders, and potential therapeutic interventions...</p>
+        <button onclick="openModal('brain-organoids')">Read More</button>
+      </div>
+    </div>
+
+    <div class="discovery__cards">
+      <!-- Discovery 4 -->
+      <div class="discovery__card">
+        <h3>Synthetic Biology</h3>
+        <p>Synthetic biology allows researchers to design biological systems, from creating artificial cells to engineering organisms for producing new products like biofuels...</p>
+        <button onclick="openModal('synthetic-biology')">Read More</button>
+      </div>
+      <!-- Discovery 5 -->
+      <div class="discovery__card">
+        <h3>Microbiome Research</h3>
+        <p>The study of the human microbiome, especially gut bacteria, is revealing its critical role in health, including links to mental health, obesity, and autoimmune diseases...</p>
+        <button onclick="openModal('microbiome-research')">Read More</button>
+      </div>
+      <!-- Discovery 6 -->
+      <div class="discovery__card">
+        <h3>DNA Sequencing Advances</h3>
+        <p>Advances in DNA sequencing are making it faster and cheaper, helping scientists study diseases, track evolution, and analyze ancient DNA with unprecedented detail...</p>
+        <button onclick="openModal('dna-sequencing-advances')">Read More</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Major Biology Discoveries Section -->
     <section class="discoveries">
         <div class="discovery__container">
           <h2>Major Biology Discoveries</h2>
@@ -72,9 +121,251 @@
         </div>
     </section>
 
+    <section class="conference__section">
+      <div class="conference__container">
+          <h2>Upcoming Biology Conferences</h2>
+          <div class="conference__cards">
+              <!-- Conference 1 -->
+              <div class="conference__card">
+                  <img src="assets/conference4.png" alt="Biology Conference 1" />
+                  <div class="conference__details">
+                      <h3>Global Biology Research Symposium</h3>
+                      <p><i class="ri-map-pin-line"></i> University of Oxford, UK</p>
+                      <p><i class="ri-calendar-line"></i> February 12, 2025</p>
+                  </div>
+                  <button class="conference__btn">Register Now</button>
+              </div>
+              <!-- Conference 2 -->
+              <div class="conference__card">
+                  <img src="assets/conference5.jpg" alt="Biology Conference 2" />
+                  <div class="conference__details">
+                      <h3>Advances in Molecular Biology Conference</h3>
+                      <p><i class="ri-map-pin-line"></i> University of California, Berkeley</p>
+                      <p><i class="ri-calendar-line"></i> March 18, 2025</p>
+                  </div>
+                  <button class="conference__btn">Register Now</button>
+              </div>
+              <!-- Conference 3 -->
+              <div class="conference__card">
+                  <img src="assets/conference6.jpg" alt="Biology Conference 3" />
+                  <div class="conference__details">
+                      <h3>International Evolutionary Biology Congress</h3>
+                      <p><i class="ri-map-pin-line"></i> Kyoto University, Japan</p>
+                      <p><i class="ri-calendar-line"></i> April 5, 2025</p>
+                  </div>
+                  <button class="conference__btn">Register Now</button>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+
     <footer class="footer">
-      <p>Copyright © 2024 Discover Science. All rights reserved.</p>
+      <div class="footer-container">
+        <p>Developed by <strong>Akeel Ahamed R S</strong></p>
+        <p>BE. Computer Science Engineering student at SVCE</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/akeelahamed242k5/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/akeelahamed24" target="_blank">GitHub</a>
+        </div>
+        <p>Copyright © 2024 Discover Science. All rights reserved.</p>
+      </div>
     </footer>
+
+<!-- Modal Containers for Each Biology Discovery -->
+
+<!-- CRISPR Gene Editing Modal -->
+<div class="modal" id="crispr-gene-editing">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('crispr-gene-editing')">&times;</span>
+    <h3>CRISPR Gene Editing: Precise Genome Modification</h3>
+    <article>
+      <img src="assets/modal/crispr.png" alt="CRISPR Gene Editing" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>CRISPR-Cas9 technology allows scientists to make precise changes to DNA sequences, revolutionizing the field of genetic engineering with applications in treating genetic diseases and enhancing agricultural crops.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>The Discovery</h4>
+      <p>This breakthrough method enables targeted gene editing with unprecedented accuracy, opening up new possibilities in genetic research and biotechnology.</p>
+
+      <hr>
+
+      <!-- Future Implications -->
+      <h4>Future Implications</h4>
+      <p>CRISPR holds immense potential for the treatment of genetic disorders and the development of more resilient crops, shaping the future of medicine and agriculture.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>CRISPR gene editing is a transformative technology that could pave the way for new treatments, agricultural advancements, and deeper understanding of gene functions.</p>
+    </article>
+  </div>
+</div>
+
+<!-- Organ-on-a-Chip Modal -->
+<div class="modal" id="organ-on-a-chip">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('organ-on-a-chip')">&times;</span>
+    <h3>Organ-on-a-Chip: Mimicking Human Organs</h3>
+    <article>
+      <img src="assets/modal/organ-on-a-chip.png" alt="Organ-on-a-Chip" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Organ-on-a-chip technology allows scientists to create miniature models of human organs, offering a more accurate and ethical way to study diseases and test drugs, potentially replacing animal testing.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>The Discovery</h4>
+      <p>These bioengineered chips replicate the physiological responses of real organs, offering a new platform for research in personalized medicine and drug development.</p>
+
+      <hr>
+
+      <!-- Future Implications -->
+      <h4>Future Implications</h4>
+      <p>This technology could revolutionize medical research by providing more accurate models of human organs, leading to safer and more effective treatments.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>Organ-on-a-chip models represent a significant step toward advancing medical research, making drug testing more reliable and reducing the need for animal experimentation.</p>
+    </article>
+  </div>
+</div>
+
+<!-- Brain Organoids Modal -->
+<div class="modal" id="brain-organoids">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('brain-organoids')">&times;</span>
+    <h3>Brain Organoids: Growing Mini Brains</h3>
+    <article>
+      <img src="assets/modal/brain-organoids.png" alt="Brain Organoids" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Scientists have successfully grown brain organoids, small 3D models of the brain, from stem cells. These mini brains provide insight into human brain development and diseases like Alzheimer's and autism.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>The Discovery</h4>
+      <p>Brain organoids simulate the development of real human brains, allowing researchers to study complex neurological processes and identify potential treatments for brain disorders.</p>
+
+      <hr>
+
+      <!-- Future Implications -->
+      <h4>Future Implications</h4>
+      <p>The use of brain organoids could lead to breakthroughs in understanding mental and neurological disorders, as well as in developing new therapies.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>Brain organoids offer a powerful tool for studying the human brain, with the potential to transform neuroscience and lead to novel treatments for neurological conditions.</p>
+    </article>
+  </div>
+</div>
+
+<!-- Synthetic Biology Modal -->
+<div class="modal" id="synthetic-biology">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('synthetic-biology')">&times;</span>
+    <h3>Synthetic Biology: Designing Living Systems</h3>
+    <article>
+      <img src="assets/modal/synthetic-biology.png" alt="Synthetic Biology" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Synthetic biology involves designing and building new biological systems, such as creating artificial cells or modifying organisms to produce valuable compounds like biofuels or pharmaceuticals.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>Innovation in Biology</h4>
+      <p>Researchers are using synthetic biology to engineer organisms that can produce new materials, clean up environmental pollutants, or even create entirely synthetic life forms.</p>
+
+      <hr>
+
+      <!-- Future Applications -->
+      <h4>Future Applications</h4>
+      <p>This field holds the potential to revolutionize industries by enabling the creation of custom organisms tailored to specific tasks, from medical treatments to sustainable energy production.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>Synthetic biology represents a bold step forward in biotechnology, with vast potential applications in healthcare, energy, and environmental sustainability.</p>
+    </article>
+  </div>
+</div>
+
+<!-- Microbiome Research Modal -->
+<div class="modal" id="microbiome-research">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('microbiome-research')">&times;</span>
+    <h3>Microbiome Research: Understanding Gut Bacteria</h3>
+    <article>
+      <img src="assets/modal/microbiome.png" alt="Microbiome Research" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>The human microbiome, especially gut bacteria, plays a crucial role in health and disease. Researchers are exploring the microbiome's links to obesity, mental health, and autoimmune conditions.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>Breakthrough in Microbiome Science</h4>
+      <p>By studying the microbiome, scientists are learning how gut bacteria influence everything from metabolism to mental health, offering new avenues for treating a variety of conditions.</p>
+
+      <hr>
+
+      <!-- Future Implications -->
+      <h4>Future Implications</h4>
+      <p>This research could lead to microbiome-based therapies, including personalized diets and probiotics tailored to individual gut bacteria profiles, improving health outcomes.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>Microbiome research is reshaping our understanding of human biology, with potential breakthroughs in nutrition, mental health, and chronic disease treatment.</p>
+    </article>
+  </div>
+</div>
+
+<!-- DNA Sequencing Advances Modal -->
+<div class="modal" id="dna-sequencing-advances">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('dna-sequencing-advances')">&times;</span>
+    <h3>DNA Sequencing Advances: Faster and Cheaper Sequencing</h3>
+    <article>
+      <img src="assets/modal/dna-sequencing.png" alt="DNA Sequencing" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>DNA sequencing technology has become faster, cheaper, and more accessible, enabling scientists to study the genetic basis of diseases, trace human evolution, and analyze ancient DNA.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>The Discovery</h4>
+      <p>With the advent of high-throughput sequencing technologies, researchers can now sequence entire genomes quickly and at lower costs, making it a vital tool in modern biology.</p>
+
+      <hr>
+
+      <!-- Future Applications -->
+      <h4>Future Applications</h4>
+      <p>These advances could revolutionize medicine, enabling personalized treatments based on genetic information and accelerating research in fields like evolutionary biology and anthropology.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>Advances in DNA sequencing are transforming biological research, making it easier to unlock the mysteries of genetics and apply them to medicine and other fields.</p>
+    </article>
+  </div>
+</div>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
