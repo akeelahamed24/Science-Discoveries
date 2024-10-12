@@ -15,10 +15,6 @@ navLinks.addEventListener("click", (e) => {
 });
 
 
-menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-});
-
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
