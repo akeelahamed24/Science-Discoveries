@@ -499,3 +499,198 @@ footer {
 .conference__btn:hover {
   background-color: var(--primary-color-dark);
 }
+
+/* For tablets and smaller devices (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .discoveries {
+    padding: 3rem 1rem;
+  }
+
+  .discovery__cards {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 1.5rem; /* Reduce gap between cards */
+  }
+
+  .discovery__card {
+    max-width: 100%; /* Allow cards to take full width */
+  }
+
+  .discovery__card img {
+    height: 300px; /* Reduce image height */
+  }
+
+  .discovery__details h3 {
+    font-size: 1.3rem; /* Slightly smaller heading */
+  }
+
+  .discovery__details p {
+    font-size: 0.85rem; /* Slightly smaller paragraph text */
+  }
+
+  footer {
+    padding: 1.5rem 1rem; /* Reduce padding in the footer */
+  }
+}
+
+/* For mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .discoveries h2 {
+    font-size: 2rem; /* Reduce heading size */
+  }
+
+  .discovery__cards {
+    gap: 1rem; /* Reduce gap between cards */
+  }
+
+  .discovery__card img {
+    height: 250px; /* Further reduce image height */
+  }
+
+  .discovery__details h3 {
+    font-size: 1.2rem; /* Further reduce heading size */
+  }
+
+  .discovery__details p {
+    font-size: 0.8rem; /* Reduce paragraph text size */
+  }
+
+  footer {
+    padding: 1rem 0.5rem; /* Reduce footer padding */
+  }
+
+  .social-links a {
+    margin: 0 0.5rem; /* Reduce spacing between social links */
+  }
+}
+
+/* For small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .discoveries {
+    padding: 2rem 0.5rem; /* Reduce padding on very small screens */
+  }
+
+  .discoveries h2 {
+    font-size: 1.8rem; /* Further reduce heading size */
+  }
+
+  .discovery__details h3 {
+    font-size: 1rem; /* Further reduce heading size */
+  }
+
+  .discovery__details p {
+    font-size: 0.75rem; /* Further reduce paragraph text size */
+  }
+
+  footer {
+    padding: 1rem 0.5rem; /* Footer padding remains the same as in the tablet view */
+  }
+
+  .footer-container p {
+    font-size: 0.8rem; /* Smaller text for footer paragraphs */
+  }
+}
+
+/* For tablets and smaller devices (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .conference__section {
+    padding: 3rem 1rem;
+  }
+
+  .conference__section h2 {
+    font-size: 2rem; /* Reduce heading size */
+  }
+
+  .conference__cards {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 1.5rem; /* Reduce gap between cards */
+  }
+
+  .conference__card {
+    max-width: 100%; /* Make cards take full width */
+  }
+
+  .conference__card img {
+    height: 180px; /* Reduce image height */
+  }
+
+  .conference__details h3 {
+    font-size: 1.3rem; /* Slightly smaller heading */
+  }
+
+  .conference__details p {
+    font-size: 0.9rem; /* Slightly smaller paragraph text */
+  }
+
+  .conference__btn {
+    padding: 0.75rem; /* Reduce button padding */
+    font-size: 0.9rem; /* Slightly smaller button text */
+  }
+}
+
+/* For mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .conference__section h2 {
+    font-size: 1.8rem; /* Further reduce heading size */
+  }
+
+  .conference__cards {
+    gap: 1rem; /* Further reduce gap between cards */
+  }
+
+  .conference__card {
+    max-width: 100%; /* Cards should take full width */
+  }
+
+  .conference__card img {
+    height: 160px; /* Further reduce image height */
+  }
+
+  .conference__details h3 {
+    font-size: 1.2rem; /* Further reduce heading size */
+  }
+
+  .conference__details p {
+    font-size: 0.85rem; /* Further reduce paragraph text size */
+  }
+
+  .conference__btn {
+    padding: 0.75rem; /* Keep reduced padding for button */
+    font-size: 0.85rem; /* Further reduce button text size */
+  }
+}
+
+/* For small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .conference__section {
+    padding: 2rem 0.5rem; /* Reduce padding */
+  }
+
+  .conference__section h2 {
+    font-size: 1.5rem; /* Further reduce heading size */
+  }
+
+  .conference__cards {
+    gap: 0.5rem; /* Reduce gap even further */
+  }
+
+  .conference__card {
+    max-width: 100%; /* Cards take full width on small screens */
+  }
+
+  .conference__card img {
+    height: 140px; /* Further reduce image height */
+  }
+
+  .conference__details h3 {
+    font-size: 1rem; /* Further reduce heading size */
+  }
+
+  .conference__details p {
+    font-size: 0.75rem; /* Further reduce paragraph text size */
+  }
+
+  .conference__btn {
+    padding: 0.5rem; /* Reduce button padding further */
+    font-size: 0.75rem; /* Further reduce button text size */
+  }
+}
