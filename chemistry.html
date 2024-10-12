@@ -31,13 +31,13 @@
       <div class="header__content">
         <h1>Chemistry Discoveries</h1>
         <p>Dive into revolutionary breakthroughs such as the Periodic Table and Atomic Theory.</p>
-        <form action="/">
+        <form id="searchForm">
           <div class="input__row">
             <div class="input__group">
               <h5>Search Discoveries</h5>
               <div>
                 <span><i class="ri-search-line"></i></span>
-                <input type="text" placeholder="e.g. Atomic Theory" />
+                <input id="searchInput" type="text" placeholder="e.g. Atomic Theory" />
               </div>
             </div>
           </div>
@@ -46,6 +46,56 @@
       </div>
     </header>
 
+    <!-- Latest Chemistry Discoveries Section -->
+<section class="latest__discoveries">
+  <div class="discovery__container">
+    <h2>Latest Chemistry Discoveries</h2>
+    <div class="discovery__cards">
+      <!-- Discovery 1 -->
+      <div class="discovery__card">
+        <h3>Artificial Photosynthesis</h3>
+        <p>Researchers have made significant strides in creating artificial systems that mimic photosynthesis, converting sunlight and water into hydrogen fuel...</p>
+        <button onclick="openModal('artificial-photosynthesis')">Read More</button>
+      </div>
+      <!-- Discovery 2 -->
+      <div class="discovery__card">
+        <h3>Recyclable Plastics</h3>
+        <p>Scientists have developed new methods to break down plastic waste into its original components, allowing for recycling without significant energy consumption...</p>
+        <button onclick="openModal('recyclable-plastics')">Read More</button>
+      </div>
+      <!-- Discovery 3 -->
+      <div class="discovery__card">
+        <h3>Advanced Battery Materials</h3>
+        <p>Researchers are exploring novel materials for batteries, such as solid-state electrolytes and metal-air batteries, which could lead to higher energy density...</p>
+        <button onclick="openModal('advanced-battery-materials')">Read More</button>
+      </div>
+    </div>
+
+    <div class="discovery__cards">
+      <!-- Discovery 4 -->
+      <div class="discovery__card">
+        <h3>Sustainable Materials</h3>
+        <p>Scientists are developing sustainable materials made from renewable resources like plants, fungi, and bacteria, offering eco-friendly alternatives...</p>
+        <button onclick="openModal('sustainable-materials')">Read More</button>
+      </div>
+      <!-- Discovery 5 -->
+      <div class="discovery__card">
+        <h3>Drug Discovery</h3>
+        <p>Artificial intelligence is being used to accelerate drug discovery by analyzing vast amounts of data to identify potential drug candidates more efficiently...</p>
+        <button onclick="openModal('drug-discovery')">Read More</button>
+      </div>
+      <!-- Discovery 6 -->
+      <div class="discovery__card">
+        <h3>Carbon Capture and Utilization</h3>
+        <p>Researchers are working on technologies to capture carbon dioxide emissions and convert them into valuable products, such as fuels and building materials...</p>
+        <button onclick="openModal('carbon-capture')">Read More</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Major Physics Discoveries Section -->
     <section class="discoveries">
         <div class="discovery__container">
           <h2>Major Chemistry Discoveries</h2>
@@ -72,9 +122,250 @@
         </div>
     </section>
 
+    <section class="conference__section">
+      <div class="conference__container">
+          <h2>Upcoming Chemistry Conferences</h2>
+          <div class="conference__cards">
+              <!-- Conference 1 -->
+              <div class="conference__card">
+                  <img src="assets/conference4.png" alt="Chemistry Conference 1" />
+                  <div class="conference__details">
+                      <h3>Global Chemistry Research Symposium</h3>
+                      <p><i class="ri-map-pin-line"></i> University of Oxford, UK</p>
+                      <p><i class="ri-calendar-line"></i> February 12, 2025</p>
+                  </div>
+                  <button class="conference__btn">Register Now</button>
+              </div>
+              <!-- Conference 2 -->
+              <div class="conference__card">
+                  <img src="assets/conference5.jpg" alt="Chemistry Conference 2" />
+                  <div class="conference__details">
+                      <h3>Advances in Organic Chemistry Conference</h3>
+                      <p><i class="ri-map-pin-line"></i> University of California, Berkeley</p>
+                      <p><i class="ri-calendar-line"></i> March 18, 2025</p>
+                  </div>
+                  <button class="conference__btn">Register Now</button>
+              </div>
+              <!-- Conference 3 -->
+              <div class="conference__card">
+                  <img src="assets/conference6.jpg" alt="Chemistry Conference 3" />
+                  <div class="conference__details">
+                      <h3>International Green Chemistry Congress</h3>
+                      <p><i class="ri-map-pin-line"></i> Kyoto University, Japan</p>
+                      <p><i class="ri-calendar-line"></i> April 5, 2025</p>
+                  </div>
+                  <button class="conference__btn">Register Now</button>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
     <footer class="footer">
-      <p>Copyright © 2024 Discover Science. All rights reserved.</p>
+      <div class="footer-container">
+        <p>Developed by <strong>Akeel Ahamed R S</strong></p>
+        <p>BE. Computer Science Engineering student at SVCE</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/akeelahamed242k5/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/akeelahamed24" target="_blank">GitHub</a>
+        </div>
+        <p>Copyright © 2024 Discover Science. All rights reserved.</p>
+      </div>
     </footer>
+
+<!-- Modal Containers for Each Chemistry Discovery -->
+
+<!-- Artificial Photosynthesis Modal -->
+<div class="modal" id="artificial-photosynthesis">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('artificial-photosynthesis')">&times;</span>
+    <h3>Artificial Photosynthesis: Converting Sunlight into Fuel</h3>
+    <article>
+      <img src="assets/modal/artificial-photosynthesis.png" alt="Artificial Photosynthesis" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Researchers have made significant advancements in artificial photosynthesis, a process that mimics the natural ability of plants to convert sunlight and water into energy. This technology could lead to sustainable energy production through hydrogen fuel.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>The Discovery</h4>
+      <p>The system works by using specialized catalysts that split water into hydrogen and oxygen using sunlight. This breakthrough could provide a clean, renewable source of fuel.</p>
+
+      <hr>
+
+      <!-- Future Implications -->
+      <h4>Future Implications</h4>
+      <p>Artificial photosynthesis has the potential to provide an eco-friendly alternative to fossil fuels, contributing to efforts in combating climate change.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>This discovery marks a major step toward sustainable fuel production, with significant implications for energy and environmental science.</p>
+    </article>
+  </div>
+</div>
+
+<!-- Recyclable Plastics Modal -->
+<div class="modal" id="recyclable-plastics">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('recyclable-plastics')">&times;</span>
+    <h3>Recyclable Plastics: Breaking Down Plastic Waste</h3>
+    <article>
+      <img src="assets/modal/recyclable-plastics.png" alt="Recyclable Plastics" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Scientists have developed innovative techniques to break down plastic waste into its original components. This method allows for the recycling of plastics without the need for high energy consumption, addressing the global plastic waste crisis.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>The Discovery</h4>
+      <p>The process uses specific enzymes and chemical treatments to break plastics down at the molecular level, making them easier to recycle into new materials.</p>
+
+      <hr>
+
+      <!-- Future Implications -->
+      <h4>Future Implications</h4>
+      <p>This breakthrough could reduce plastic pollution and help create a more circular economy, where plastics are continuously reused instead of ending up in landfills and oceans.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>Recyclable plastics represent a significant step forward in combating environmental waste, with potential for widespread industrial and ecological impact.</p>
+    </article>
+  </div>
+</div>
+
+<!-- Advanced Battery Materials Modal -->
+<div class="modal" id="advanced-battery-materials">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('advanced-battery-materials')">&times;</span>
+    <h3>Advanced Battery Materials: Improving Energy Storage</h3>
+    <article>
+      <img src="assets/modal/advanced-battery.png" alt="Advanced Battery Materials" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Researchers are developing new materials for batteries, such as solid-state electrolytes and metal-air batteries, which promise to improve energy density and longevity in energy storage devices.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>Breakthrough Materials</h4>
+      <p>These new materials offer greater stability and efficiency, addressing some of the limitations of current lithium-ion batteries, such as overheating and short life cycles.</p>
+
+      <hr>
+
+      <!-- Future Applications -->
+      <h4>Future Applications</h4>
+      <p>The development of advanced battery materials could lead to more powerful and longer-lasting devices, revolutionizing industries like consumer electronics and electric vehicles.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>This discovery could transform energy storage technologies, contributing to a greener and more sustainable future in multiple sectors.</p>
+    </article>
+  </div>
+</div>
+
+<!-- Sustainable Materials Modal -->
+<div class="modal" id="sustainable-materials">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('sustainable-materials')">&times;</span>
+    <h3>Sustainable Materials: Biodegradable and Renewable</h3>
+    <article>
+      <img src="assets/modal/sustainable-materials.png" alt="Sustainable Materials" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Scientists are developing new sustainable materials made from renewable resources like plants, fungi, and bacteria. These biodegradable alternatives could replace traditional plastics and textiles.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>Eco-Friendly Innovation</h4>
+      <p>Materials derived from natural sources degrade safely and are produced with fewer environmental impacts, offering a green solution to many industrial applications.</p>
+
+      <hr>
+
+      <!-- Future Applications -->
+      <h4>Future Applications</h4>
+      <p>These materials could revolutionize industries such as packaging, fashion, and construction, providing eco-friendly alternatives that reduce the environmental footprint.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>Ongoing research in sustainable materials holds the promise of a more eco-conscious world, as industries begin adopting these green alternatives.</p>
+    </article>
+  </div>
+</div>
+
+<!-- AI-Powered Drug Discovery Modal -->
+<div class="modal" id="drug-discovery">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('drug-discovery')">&times;</span>
+    <h3>AI-Powered Drug Discovery</h3>
+    <article>
+      <img src="assets/modal/drug-discovery.png" alt="AI-Powered Drug Discovery" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Artificial intelligence is transforming drug discovery by allowing researchers to analyze vast datasets and identify potential drug candidates more quickly and efficiently.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>AI and Drug Development</h4>
+      <p>AI systems can analyze molecular structures, predict drug interactions, and even simulate the effects of drugs, greatly reducing the time and cost associated with traditional drug development methods.</p>
+
+      <hr>
+
+      <!-- Future Potential -->
+      <h4>Future Applications</h4>
+      <p>This approach could accelerate the discovery of new treatments for diseases, improving the overall drug development process and leading to more effective therapies.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>The use of AI in drug discovery represents a paradigm shift in pharmaceutical research, promising faster and more targeted solutions for global health challenges.</p>
+    </article>
+  </div>
+</div>
+
+<!-- Carbon Capture and Utilization Modal -->
+<div class="modal" id="carbon-capture">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('carbon-capture')">&times;</span>
+    <h3>Carbon Capture and Utilization</h3>
+    <article>
+      <img src="assets/modal/carbon-capture.png" alt="Carbon Capture" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Researchers are developing new technologies to capture carbon dioxide emissions and convert them into useful products like fuels, chemicals, and building materials, helping to reduce carbon footprints.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>CO2 Utilization</h4>
+      <p>Advanced catalytic processes are being developed to turn captured CO2 into valuable products, potentially creating an economic incentive for reducing carbon emissions.</p>
+
+      <hr>
+
+      <!-- Future Implications -->
+      <h4>Future Implications</h4>
+      <p>This technology could play a crucial role in global efforts to combat climate change, providing a practical solution for reducing atmospheric CO2.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>Carbon capture and utilization represent a promising strategy for reducing greenhouse gases and transforming industries reliant on fossil fuels.</p>
+    </article>
+  </div>
+</div>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
