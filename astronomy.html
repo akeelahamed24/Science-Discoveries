@@ -46,6 +46,57 @@
       </div>
     </header>
 
+<!-- Latest Astronomy Discoveries Section -->
+<section class="latest__discoveries">
+  <div class="discovery__container">
+    <h2>Latest Astronomy Discoveries</h2>
+    <div class="discovery__cards">
+      <!-- Discovery 1 -->
+      <div class="discovery__card">
+        <h3>Exoplanet Discoveries</h3>
+        <p>Astronomers have continued to discover potentially habitable exoplanets within the habitable zones of their stars, where liquid water could exist...</p>
+        <button onclick="openModal('exoplanet-discoveries')">Read More</button>
+      </div>
+      <!-- Discovery 2 -->
+      <div class="discovery__card">
+        <h3>Black Hole Mergers</h3>
+        <p>The detection of gravitational waves from merging black holes has provided new insights into the universe and evidence for intermediate-mass black holes...</p>
+        <button onclick="openModal('black-hole-mergers')">Read More</button>
+      </div>
+      <!-- Discovery 3 -->
+      <div class="discovery__card">
+        <h3>Fast Radio Bursts (FRBs)</h3>
+        <p>FRBs are mysterious cosmic signals, and recent studies suggest neutron stars or magnetars may be potential sources of these brief, intense radio bursts...</p>
+        <button onclick="openModal('fast-radio-bursts')">Read More</button>
+      </div>
+    </div>
+
+    <div class="discovery__cards">
+      <!-- Discovery 4 -->
+      <div class="discovery__card">
+        <h3>Dark Matter and Dark Energy</h3>
+        <p>Ongoing research is attempting to constrain the properties of dark matter and dark energy, which make up the majority of the universe's mass and energy...</p>
+        <button onclick="openModal('dark-matter-dark-energy')">Read More</button>
+      </div>
+      <!-- Discovery 5 -->
+      <div class="discovery__card">
+        <h3>Interstellar Objects</h3>
+        <p>The discovery of interstellar objects like Oumuamua and Borisov has provided unique opportunities to study objects from beyond our solar system...</p>
+        <button onclick="openModal('interstellar-objects')">Read More</button>
+      </div>
+      <!-- Discovery 6 -->
+      <div class="discovery__card">
+        <h3>Galaxy Clusters</h3>
+        <p>Massive galaxy clusters, the largest structures in the universe, offer valuable insights into the distribution of matter and the evolution of galaxies...</p>
+        <button onclick="openModal('galaxy-clusters')">Read More</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Major Astronomy Discoveries Section -->
     <section class="discoveries">
         <div class="discovery__container">
           <h2>Major Astronomy Discoveries</h2>
@@ -72,9 +123,251 @@
         </div>
     </section>
 
+    <section class="conference__section">
+      <div class="conference__container">
+          <h2>Upcoming Astronomy Conferences</h2>
+          <div class="conference__cards">
+              <!-- Conference 1 -->
+              <div class="conference__card">
+                  <img src="assets/conference1.png" alt="Astronomy Conference 1" />
+                  <div class="conference__details">
+                      <h3>NASA Astrophysics Symposium</h3>
+                      <p><i class="ri-map-pin-line"></i> NASA Headquarters, Washington D.C., USA</p>
+                      <p><i class="ri-calendar-line"></i> January 25, 2025</p>
+                  </div>
+                  <button class="conference__btn">Register Now</button>
+              </div>
+              <!-- Conference 2 -->
+              <div class="conference__card">
+                  <img src="assets/conference2.jpg" alt="Astronomy Conference 2" />
+                  <div class="conference__details">
+                      <h3>Exploring the Cosmos: ISRO Space Science Conference</h3>
+                      <p><i class="ri-map-pin-line"></i> ISRO Headquarters, Bengaluru, India</p>
+                      <p><i class="ri-calendar-line"></i> February 14, 2025</p>
+                  </div>
+                  <button class="conference__btn">Register Now</button>
+              </div>
+              <!-- Conference 3 -->
+              <div class="conference__card">
+                  <img src="assets/conference3.jpg" alt="Astronomy Conference 3" />
+                  <div class="conference__details">
+                      <h3>European Space Agency (ESA) Astronomy Summit</h3>
+                      <p><i class="ri-map-pin-line"></i> ESA, Paris, France</p>
+                      <p><i class="ri-calendar-line"></i> March 10, 2025</p>
+                  </div>
+                  <button class="conference__btn">Register Now</button>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
     <footer class="footer">
-      <p>Copyright © 2024 Discover Science. All rights reserved.</p>
+      <div class="footer-container">
+        <p>Developed by <strong>Akeel Ahamed R S</strong></p>
+        <p>BE. Computer Science Engineering student at SVCE</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/akeelahamed242k5/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/akeelahamed24" target="_blank">GitHub</a>
+        </div>
+        <p>Copyright © 2024 Discover Science. All rights reserved.</p>
+      </div>
     </footer>
+
+<!-- Modal Containers for Each Astronomy Discovery -->
+
+<!-- Exoplanet Discoveries Modal -->
+<div class="modal" id="exoplanet-discoveries">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('exoplanet-discoveries')">&times;</span>
+    <h3>Exoplanet Discoveries: Potentially Habitable Worlds</h3>
+    <article>
+      <img src="assets/modal/exoplanet-discoveries.png" alt="Exoplanet Discoveries" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Astronomers have discovered several exoplanets within the habitable zones of their stars, where conditions may allow for liquid water and potentially life to exist.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>The Discovery</h4>
+      <p>These planets are found using advanced techniques like the transit method and radial velocity measurements. Some of these worlds may have Earth-like conditions, raising hopes of finding extraterrestrial life.</p>
+
+      <hr>
+
+      <!-- Future Implications -->
+      <h4>Future Implications</h4>
+      <p>The study of these exoplanets could provide insights into planet formation, habitability, and the potential for life beyond our solar system.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>Ongoing research into exoplanetary systems holds the promise of answering fundamental questions about the universe and the possibility of life elsewhere.</p>
+    </article>
+  </div>
+</div>
+
+<!-- Black Hole Mergers Modal -->
+<div class="modal" id="black-hole-mergers">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('black-hole-mergers')">&times;</span>
+    <h3>Black Hole Mergers: Gravitational Wave Breakthrough</h3>
+    <article>
+      <img src="assets/modal/black-hole-mergers.png" alt="Black Hole Mergers" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>The detection of gravitational waves from black hole mergers has opened a new window into the universe, allowing scientists to study these cosmic events in unprecedented detail.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>The Discovery</h4>
+      <p>Gravitational waves, ripples in spacetime caused by merging black holes, provide a new way to observe phenomena that were previously invisible. This also includes evidence for intermediate-mass black holes.</p>
+
+      <hr>
+
+      <!-- Future Implications -->
+      <h4>Future Implications</h4>
+      <p>Studying black hole mergers will help improve our understanding of stellar evolution, gravity, and the formation of the universe’s most extreme objects.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>This discovery has expanded the field of astrophysics, allowing researchers to explore the most violent events in the cosmos.</p>
+    </article>
+  </div>
+</div>
+
+<!-- Fast Radio Bursts Modal -->
+<div class="modal" id="fast-radio-bursts">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('fast-radio-bursts')">&times;</span>
+    <h3>Fast Radio Bursts (FRBs): Mysterious Cosmic Signals</h3>
+    <article>
+      <img src="assets/modal/fast-radio-bursts.png" alt="Fast Radio Bursts" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Fast Radio Bursts (FRBs) are brief, intense bursts of radio waves from distant galaxies. Their mysterious origin has sparked intense interest in the scientific community.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>The Discovery</h4>
+      <p>Recent observations suggest that FRBs may be caused by neutron stars or highly magnetized objects like magnetars, but their exact origin remains unknown.</p>
+
+      <hr>
+
+      <!-- Future Implications -->
+      <h4>Future Implications</h4>
+      <p>Unraveling the mystery of FRBs could provide insights into the nature of the universe's most energetic and enigmatic phenomena.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>Continued research on FRBs promises to reveal more about these extraordinary cosmic signals and the extreme environments that create them.</p>
+    </article>
+  </div>
+</div>
+
+<!-- Dark Matter and Dark Energy Modal -->
+<div class="modal" id="dark-matter-dark-energy">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('dark-matter-dark-energy')">&times;</span>
+    <h3>Dark Matter and Dark Energy: Unsolved Mysteries</h3>
+    <article>
+      <img src="assets/modal/dark-matter-dark-energy.png" alt="Dark Matter and Dark Energy" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Dark matter and dark energy, which together make up most of the universe, remain two of the biggest mysteries in modern physics and cosmology.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>Ongoing Research</h4>
+      <p>New experiments and observations are being conducted to constrain the properties of dark matter and dark energy, with the goal of understanding their influence on the universe's structure and expansion.</p>
+
+      <hr>
+
+      <!-- Future Implications -->
+      <h4>Future Implications</h4>
+      <p>A deeper understanding of dark matter and dark energy could revolutionize our understanding of the universe's fate and fundamental laws of physics.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>These cosmic entities are central to our understanding of the cosmos, and unraveling their mysteries will likely lead to groundbreaking discoveries.</p>
+    </article>
+  </div>
+</div>
+
+<!-- Interstellar Objects Modal -->
+<div class="modal" id="interstellar-objects">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('interstellar-objects')">&times;</span>
+    <h3>Interstellar Objects: Visitors from Beyond</h3>
+    <article>
+      <img src="assets/modal/interstellar-objects.png" alt="Interstellar Objects" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>The discovery of interstellar objects like Oumuamua and Borisov has provided rare opportunities to study visitors from outside our solar system.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>The Discovery</h4>
+      <p>Oumuamua was the first known interstellar object detected passing through our solar system, followed by the discovery of comet Borisov. These objects offer a glimpse into the materials and processes that exist beyond our solar neighborhood.</p>
+
+      <hr>
+
+      <!-- Future Implications -->
+      <h4>Future Implications</h4>
+      <p>Studying interstellar objects could improve our understanding of planetary formation, and the composition of objects beyond our solar system.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>Interstellar objects are a cosmic curiosity that continue to intrigue astronomers, offering a unique view of the broader universe.</p>
+    </article>
+  </div>
+</div>
+
+<!-- Galaxy Clusters Modal -->
+<div class="modal" id="galaxy-clusters">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('galaxy-clusters')">&times;</span>
+    <h3>Galaxy Clusters: Giant Cosmic Structures</h3>
+    <article>
+      <img src="assets/modal/galaxy-clusters.png" alt="Galaxy Clusters" class="modal-image">
+
+      <!-- Introduction -->
+      <h4>Introduction</h4>
+      <p>Galaxy clusters, the largest structures in the universe, provide critical insights into the distribution of matter and the evolution of galaxies over cosmic time.</p>
+
+      <hr>
+
+      <!-- Discovery Details -->
+      <h4>The Discovery</h4>
+      <p>Recent observations of massive galaxy clusters have revealed how dark matter influences their structure, and how galaxies within them interact and evolve over time.</p>
+
+      <hr>
+
+      <!-- Future Implications -->
+      <h4>Future Implications</h4>
+      <p>Understanding these cosmic giants will help scientists map the universe’s large-scale structure and gain insights into the processes that drive galaxy formation and evolution.</p>
+
+      <hr>
+
+      <!-- Conclusion -->
+      <p>Galaxy clusters are key to unlocking the mysteries of the universe's structure and the role of dark matter in shaping the cosmos.</p>
+    </article>
+  </div>
+</div>
+
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
